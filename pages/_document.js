@@ -24,13 +24,7 @@ export default class IntlDocument extends Document {
           <link rel="shortcut icon" href="/static/" />
           <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
           <style>{`body { margin: 0 } /* custom! */`}</style>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39254352-3" />
-          <script
-            dangerouslySetInnerHTML={{
-              __html:
-                "window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments)} gtag('js', new Date()); gtag('config', 'UA-39254352-3');"
-            }}
-          />
+
         </Head>
         <body className="custom_class">
           {this.props.customValue}
