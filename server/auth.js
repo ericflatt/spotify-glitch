@@ -32,7 +32,7 @@ auth.get('/login', function(req, res) {
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
-  // your application requests authorization
+  //  application requests authorization
   var scope = 'user-read-playback-state user-modify-playback-state';
   res.redirect(
     'https://accounts.spotify.com/authorize?' +
@@ -47,7 +47,7 @@ auth.get('/login', function(req, res) {
 });
 
 auth.get('/callback', function(req, res) {
-  // your application requests refresh and access tokens
+  //  application requests refresh and access tokens
   // after checking the state parameter
 
   var code = req.query.code || null;

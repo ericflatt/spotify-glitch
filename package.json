@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "next build",
+    "build": "next build && refresh",
     "dev": "node server/server.js",
     "start": "NODE_ENV=production node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -44,7 +44,10 @@
     "socket.io-client": "^2.0.3",
     "spotify-web-api-node": "^4.0.0",
     "uuid": "^3.1.0",
-    "webpack-bundle-analyzer": "^2.9.0"
+    "webpack-bundle-analyzer": "^2.9.0",
+    "use-socket.io-client": "^1.1.0",
+    "immer": "^6.0.5",
+    "use-immer": "^0.4.0"
   },
   "devDependencies": {
     "husky": "^0.14.3",

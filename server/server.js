@@ -19,11 +19,9 @@ const auth = require('./auth');
 const api = require('./api');
 const glob = require('glob');
 
-// Get the supported languages by looking for translations in the `lang/` dir.
 const languages = glob.sync('./lang/*.json').map(f => basename(f, '.json'));
 
-// We need to expose React Intl's locale data on the request for the user's
-// locale. This function will also cache the scripts by lang in memory.
+
 const localeDataCache = new Map();
 const getLocaleDataScript = locale => {
   const lang = locale.split('-')[0];
@@ -35,9 +33,7 @@ const getLocaleDataScript = locale => {
   return localeDataCache.get(lang);
 };
 
-// We need to load and expose the translations on the request for the user's
-// locale. These will only be used in production, in dev the `defaultMessage` in
-// each message description in the source code will be used.
+
 const getMessages = locale => {
   return require(`../lang/${locale}.json`);
 };
