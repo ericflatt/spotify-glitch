@@ -45,10 +45,12 @@ class Main extends React.Component {
             <Queue items={this.props.queue} session={this.props.session} />
             {this.props.session.user !== null ? <AddToQueue /> : null}
             {this.props.session.user !== null ? <Devices /> : null}
+            
           </div>
           <div style={{ float: 'right', width: '150px' }}>
             <Users items={this.props.users} />
           </div>
+
         </div>
       </Layout>
     );

@@ -11,6 +11,7 @@ class Devices extends React.PureComponent {
   render() {
     const { devices, isFetching, fetchAvailableDevices, transferPlaybackToDevice } = this.props;
     return (
+      
       <div style={{ paddingBottom: '10px' }}>
         <h2><FormattedMessage id="devices.title" /></h2>
         <style jsx>
@@ -59,6 +60,7 @@ class Devices extends React.PureComponent {
               </tbody>
             </table>}
       </div>
+      
     );
   }
 }
